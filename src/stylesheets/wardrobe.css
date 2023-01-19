@@ -1,0 +1,219 @@
+body {
+    background-color: #F2EBE9;
+    font-family: Arial, Arial bold, Helvetica, sans-serif;
+    margin: 0px;
+}
+select {
+    display: inline-block;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    color:rgb(90,103,135);
+    width: auto;
+    padding: 9px 12px;
+    border-radius: 5px;
+}
+#imageInput{
+    display: inline-block;
+    background-color: white;
+    margin-left: 0px;
+    color:rgb(90,103,135);
+    width: 250px;
+    padding: 9px 0px;
+    border-radius: 5px;
+}
+section {
+    display: block;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+
+}
+article {
+    padding: 10px;
+    margin: 0px;
+    width: 50%;
+}
+input {
+    display: block;
+}
+select {
+    display: block;
+}
+button {
+    display: block;
+}
+h2 {
+    margin-top: 0px;
+    text-align: center;
+}
+h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.header {
+    background-color: rgb(90,103,135);
+    color: white;
+    margin-top: 0;
+    /* margin-bottom: aut; */
+    position: fixed;
+    width: 100%;
+}
+.headerText{
+    position: relative;
+    margin-left: 15px;   
+    bottom: 12px;
+}
+.headerImg {
+    width:15px; 
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+.headerArticle2Container {
+    display: relative;
+    margin-top: 7px;
+}
+#bodyHeaderButton {
+    background-color: rgb(255,224,113);
+    position: absolute;
+    right: 50px;
+    width: 100px;
+    top: 45px;
+    border-radius: 7px;
+    padding: 7px 7px;
+    border-style: none;
+    box-shadow: 0px 2px rgb(218, 192, 101), 
+    2px 2px 5px rgba(255, 224, 113, 0.24);
+    font-size: 11pt;
+}
+
+
+#createOutfitContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 130px;
+}
+
+#outfitSelector {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+.typeContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-height: 150px;
+    border: solid 2px;
+    border-color: rgb(90,103,135);
+    margin: 10px 0px 10px 0px;
+    background-color: white;
+    border-radius: 100px;
+}
+.typeLeft {
+    display: flex;
+    justify-content: right;
+}
+.typeLeft img {
+    height: 50px;
+    width: 20px;
+    margin-top: 50px;
+}
+.typeRight {
+    display: flex;
+    justify-content: left;
+}
+.typeRight img {
+    height: 50px;
+    width: 20px;
+    margin-top: 50px;
+}
+.typeMid {
+    display: flex;
+    justify-content: center;
+}
+.typeMid img {
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
+}
+
+#comboContainer {
+    display: block;
+}
+#createClothesBlock {
+    display: block;
+    text-align: center;
+}
+#createClothesContainer {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    border: solid 2px;
+    border-color: rgb(90,103,135);
+    left: 120px;
+    top: 170px;
+    width: 40%;
+    background-color: white;
+    border-radius: 40px;
+    /* margin-top: 150px; */
+}
+#imgContainer {
+    display: block;
+    justify-content: center;
+}
+#imgDisplay {
+    display: flex;
+    justify-content: center;
+}
+#imgDisplay img{
+    width: 200px;
+    height: 200px;
+    padding: 35px;
+    
+}
+
+#filtersBlock {
+    display: block;
+}
+#filtersContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    border: solid 2px;
+    border-color: rgb(90,103,135);
+    left: 50px;
+    top: 475px;
+    width: 50%;
+    background-color: white;
+    border-radius: 40px;
+    padding: 5px 10px;
+}
+.filters {
+    margin:10px;
+    border: solid 1px;
+    border: solid 2px;
+    border-color: rgb(90,103,135);
+    border-radius: 20px;
+}
+
+.checkboxContainer {
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+input[type=checkbox] {
+    display: inline-block;
+}
+#optionsContainer {
+    display: flex;
+    /* text-align: center; */
+    /* justify-content: center; */
+    padding: 20px;
+    margin: 0px;
+}
+
+

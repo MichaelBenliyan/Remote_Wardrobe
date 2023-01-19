@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wardrobe Project</title>
+  <link rel='stylesheet' type='text/css' href='../stylesheets/wardrobe.css'>
+  
+</head>
+<body>
+  <section class = "header">
+    <img src="/src/assets/headerImg.png">
+    <button id="bodyHeaderButton" onclick="logout()">Logout</button>
+  </section>
+
+  <div id="createOutfitContainer">
+    <div id = "comboContainer">
+      <div id="createClothesBlock">
+        <div id="createClothesContainer">
+          <div id='imgContainer'>
+            <div id='imgDisplay'>
+                <img src='src/assets/uploadIMG.jpeg'/>
+            </div>
+          </div>
+          <div id='optionsContainer'>
+            <form id='optionsForm' method='POST' action='/wardrobe' enctype='multipart/form-data'>
+                <input type='file' id='imageInput' name='image' onchange='previewImage()'>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="filtersBlock">
+        <div id="filtersContainer">
+          <div class="filters" id="headWearFilter">
+            <h2>Head Wear</h2>
+            <div class="checkboxContainer">
+              <h3>Sub-Type</h3>
+              <input type="checkbox" value="Hat">Hat<br>
+              <input type="checkbox" value="Beanie">Beanie<br>
+              <input type="checkbox" value="Scarf">Scarf<br>
+            </div>
+            <div class="checkboxContainer">
+              <h3>Colors</h3>
+              <input type="checkbox" value="black">Black<br>
+              <input type="checkbox" value="white">White<br>
+              <input type="checkbox" value="grey">Grey<br>
+              <input type="checkbox" value="red">Red<br>
+              <input type="checkbox" value="blue">Blue<br>
+              <input type="checkbox" value="orange">Orange<br>
+              <input type="checkbox" value="pink">Pink<br>
+              <input type="checkbox" value="purple">Purple<br>
+              <input type="checkbox" value="brown">Brown<br>
+            </div>
+          </div>
+          <div class="filters" id="jacketFilter">
+            <h2>Jackets</h2>
+            <div class="checkboxContainer">
+              <h3>Sub-Type</h3>
+              <input type="checkbox" value="Hoodie">Hoodie<br>
+              <input type="checkbox" value="Bomber">Bomber<br>
+              <input type="checkbox" value="Coat">Coat<br>
+              <input type="checkbox" value="Cardigan">Cardigan<br>
+            </div>
+            <div class="checkboxContainer">
+              <h3>Colors</h3>
+              <input type="checkbox" value="black">Black<br>
+              <input type="checkbox" value="white">White<br>
+              <input type="checkbox" value="grey">Grey<br>
+              <input type="checkbox" value="red">Red<br>
+              <input type="checkbox" value="blue">Blue<br>
+              <input type="checkbox" value="orange">Orange<br>
+              <input type="checkbox" value="pink">Pink<br>
+              <input type="checkbox" value="purple">Purple<br>
+              <input type="checkbox" value="brown">Brown<br>
+            </div>
+          </div>
+          <div class="filters" id="topFilter">
+            <h2>Tops</h2>
+            <div class="checkboxContainer">
+              <h3>Sub-Type</h3>
+              <input type="checkbox" value="T-Shirt">T-Shirt<br>
+              <input type="checkbox" value="Sweater">Sweater<br>
+              <input type="checkbox" value="Dress">Dress<br>
+              <input type="checkbox" value="Onezee">Onezee<br>
+            </div>
+            <div class="checkboxContainer">
+              <h3>Colors</h3>
+              <input type="checkbox" value="black">Black<br>
+              <input type="checkbox" value="white">White<br>
+              <input type="checkbox" value="grey">Grey<br>
+              <input type="checkbox" value="red">Red<br>
+              <input type="checkbox" value="blue">Blue<br>
+              <input type="checkbox" value="orange">Orange<br>
+              <input type="checkbox" value="pink">Pink<br>
+              <input type="checkbox" value="purple">Purple<br>
+              <input type="checkbox" value="brown">Brown<br>
+            </div>
+          </div>
+          <div class="filters" id="bottomFilter">
+            <h2>Bottoms</h2>
+            <div class="checkboxContainer">
+              <h3>Sub-Type</h3>
+              <input type="checkbox" value="Pant">Pant<br>
+              <input type="checkbox" value="Short">Short<br>
+              <input type="checkbox" value="Skirt">Skirt<br>
+              <input type="checkbox" value="Sweats">Sweats<br>
+            </div>
+            <div class="checkboxContainer">
+              <h3>Colors</h3>
+              <input type="checkbox" value="black">Black<br>
+              <input type="checkbox" value="white">White<br>
+              <input type="checkbox" value="grey">Grey<br>
+              <input type="checkbox" value="red">Red<br>
+              <input type="checkbox" value="blue">Blue<br>
+              <input type="checkbox" value="orange">Orange<br>
+              <input type="checkbox" value="pink">Pink<br>
+              <input type="checkbox" value="purple">Purple<br>
+              <input type="checkbox" value="brown">Brown<br>
+            </div>
+          </div>
+          <div class="filters" id="shoesFilter">
+            <h2>Shoes</h2>
+            <div class="checkboxContainer">
+              <h3>Sub-Type</h3>
+              <input type="checkbox" value="Sneakers">Sneakers<br>
+              <input type="checkbox" value="Wedges">Wedges<br>
+              <input type="checkbox" value="Professional">Professional<br>
+            </div>
+            <div class="checkboxContainer">
+              <h3>Colors</h3>
+              <input type="checkbox" value="black">Black<br>
+              <input type="checkbox" value="white">White<br>
+              <input type="checkbox" value="grey">Grey<br>
+              <input type="checkbox" value="red">Red<br>
+              <input type="checkbox" value="blue">Blue<br>
+              <input type="checkbox" value="orange">Orange<br>
+              <input type="checkbox" value="pink">Pink<br>
+              <input type="checkbox" value="purple">Purple<br>
+              <input type="checkbox" value="brown">Brown<br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="outfitSelector">
+      <div class="typeContainer" id="headWear">
+        <div class="typeLeft">
+          <img src="src/assets/left.png" onclick="previousImage('headWear')">
+        </div>
+        <div class="typeMid"></div>
+        <div class="typeRight">
+          <img src="src/assets/right.png" onclick="nextImage('headWear')">
+        </div>
+      </div>
+      <div class="typeContainer" id="jacket">
+        <div class="typeLeft">
+          <img src="src/assets/left.png" onclick="previousImage('jacket')">
+        </div>
+        <div class="typeMid"></div>
+        <div class="typeRight">
+          <img src="src/assets/right.png" onclick="nextImage('jacket')">
+        </div>
+      </div>
+      <div class="typeContainer" id="top">
+        <div class="typeLeft">
+          <img src="src/assets/left.png" onclick="previousImage('top')">
+        </div>
+        <div class="typeMid"></div>
+        <div class="typeRight">
+          <img src="src/assets/right.png" onclick="nextImage('top')">
+        </div>
+      </div>
+      <div class="typeContainer" id="bottom">
+        <div class="typeLeft">
+          <img src="src/assets/left.png" onclick="previousImage('bottom')">
+        </div>
+        <div class="typeMid"></div>
+        <div class="typeRight">
+          <img src="src/assets/right.png" onclick="nextImage('bottom')">
+        </div>
+      </div>
+      <div class="typeContainer" id="shoes">
+        <div class="typeLeft">
+          <img src="src/assets/left.png" onclick="previousImage('shoes')">
+        </div>
+        <div class="typeMid"></div>
+        <div class="typeRight">
+          <img src="src/assets/right.png" onclick="nextImage('shoes')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/wardrobe.js"></script>
+</body>
+</html> 
